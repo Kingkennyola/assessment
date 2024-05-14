@@ -44,10 +44,10 @@ func main() {
 	}
 
 	log.Printf("Server is running on port %s\n", cfg.ListenPort)
-	go s.ListenAndServe()
+	go s.ListenAndServe() //nolint:errcheck
 
 	log.Printf("Metrics is running on port %s\n", cfg.MetricsPort)
-	go ms.ListenAndServe()
+	go ms.ListenAndServe() //nolint:errcheck
 
 	// channel for ctrl+c/SIGINT event
 	sigInterruptChannel := make(chan os.Signal, 1)
@@ -61,8 +61,8 @@ func main() {
 	defer cancel()
 
 	// shutdown both servers
-	go s.Shutdown(ctx)
-	go ms.Shutdown(ctx)
+	go s.Shutdown(ctx)  //nolint:errcheck
+	go ms.Shutdown(ctx) //nolint:errcheck
 
 	// wait for ctx end
 	<-ctx.Done()
