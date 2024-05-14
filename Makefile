@@ -8,3 +8,6 @@ test:
 
 run: build
 	./phaidra-assessment
+
+build-docker:
+	docker build -t ghcr.io/kingkennyola/phaidra-assessment:0.0.1 .
