@@ -20,7 +20,6 @@ permissions:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_PREFIX: ${{ github.repository_owner }}/${{ github.event.repository.name }}
 
 jobs:
   test-and-release:
@@ -33,6 +32,10 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version-file: "go.mod"
+
+      - name: lowercase github.repository
+        run: |
+          echo "IMAGE_PREFIX=${GITHUB_REPOSITORY@L}/${{ github.event.repository.name }}" >> ${GITHUB_ENV}
 
       - name: golangci-lint
         uses: golangci/golangci-lint-action@v6
