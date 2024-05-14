@@ -1,4 +1,4 @@
-# phaidra-assessment
+# assessment
 
 Requires Go 1.22 or higher.
 
