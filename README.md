@@ -41,7 +41,6 @@ The service is primarily configured through a set of environment variables.
 | Environment Variable    | Description                                                                             | Required | Default |
 | ----------------------- | --------------------------------------------------------------------------------------- | -------- | ------- |
 | SERVER_PORT             | This configures the port the service listens on.                                        | `false`  | `8080`  |
-| SALUTATION              | This configures the saluttation returned by the service                                 | `false`  | `Hi`    |
 | SCRAPER_REQUEST_TIMEOUT | This configures the timeout setting for http requests made by the scraper               | `false`  | `30s`   |
 | SERVER_IDLE_TIMEOUT     | [IdleTimeout](https://pkg.go.dev/net/http#Server.IdleTimeout) setting for http server   | `false`  | `30s`   |
 | SERVER_READ_TIMEOUT     | [ReadTimeout](https://pkg.go.dev/net/http#Server.ReadTimeout) setting for http server   | `false`  | `15s`   |

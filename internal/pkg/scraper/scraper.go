@@ -38,6 +38,7 @@ func Scraper() http.HandlerFunc {
 			go makeRequest(scraperRequest.URL)
 		} else {
 			w.WriteHeader(http.StatusBadRequest)
+			log.Println("Invalid URL in request body.")
 			return
 		}
 	}
