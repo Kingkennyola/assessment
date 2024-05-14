@@ -1,6 +1,10 @@
 apiVersion: v2
 name: phaidra-assessment
 description: A Helm chart for Kubernetes
+home: https://github.com/Kingkennyola/phaidra-assessment
+maintainers:
+  - name: Kingkennyola
+    email: olaleyeoladimejikehinde@gmail.com
 
 # A chart can be either an 'application' or a 'library' chart.
 #
