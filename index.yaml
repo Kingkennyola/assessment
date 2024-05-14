@@ -1,0 +1,18 @@
+apiVersion: v1
+entries:
+  phaidra-assessment:
+  - apiVersion: v2
+    appVersion: 0.1.9
+    created: "2024-05-14T15:56:11.676534769Z"
+    description: A Helm chart for Kubernetes
+    digest: c566062a9d652dfb23ce5c3b66de56dedf8a8e016203650cebef6c9296fe1467
+    home: https://github.com/Kingkennyola/phaidra-assessment
+    maintainers:
+    - email: olaleyeoladimejikehinde@gmail.com
+      name: Kingkennyola
+    name: phaidra-assessment
+    type: application
+    urls:
+    - https://github.com/Kingkennyola/assessment/releases/download/phaidra-assessment-0.1.9/phaidra-assessment-0.1.9.tgz
+    version: 0.1.9
+generated: "2024-05-14T15:56:11.676545279Z"
