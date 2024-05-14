@@ -1,0 +1,13 @@
+version: "3"
+services:
+  phaidra-assessment:
+    build: .
+    container_name: phaidra-assessment
+    restart: always
+    ports:
+      - "8080:8080"
+      - "9095:9095"
+    develop:
+      watch:
+        - action: rebuild
+          path: .
