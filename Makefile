@@ -11,3 +11,6 @@ run: build
 
 build-docker:
 	docker build -t ghcr.io/kingkennyola/assessment/assessment:0.0.1 .
+
+run-docker:
+	docker compose up

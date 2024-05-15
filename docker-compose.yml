@@ -31,9 +31,10 @@ services:
       - "./k6:/scripts"
     environment:
       - K6_PROMETHEUS_RW_SERVER_URL=http://prometheus:9090/api/v1/write
-      - K6_DURATION=60s
-      - K6_VUS=10
+      - K6_DURATION=10m
+      - K6_VUS=100
       - K6_PROMETHEUS_RW_TREND_AS_NATIVE_HISTOGRAM=true
+      - HOST=assessment:8080
     restart: always
     command: ["run", "-o", "experimental-prometheus-rw", "/scripts/loadtest.js"]
 
